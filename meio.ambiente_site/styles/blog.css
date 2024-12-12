@@ -37,7 +37,7 @@ h1 {
 }
 article {
     background-color: white;
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -45,12 +45,14 @@ article {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     align-items: center;
+    max-width: 800px;
 }
-.article img {
+article img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
 footer {
     text-align: center;
     padding: 10px 0;
