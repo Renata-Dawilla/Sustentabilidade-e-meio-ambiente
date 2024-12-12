@@ -3,9 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    display: flex; /* Ativa o layout flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    min-height: 100vh; /* Garante que o body ocupe a altura total da janela */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header, footer {
@@ -32,37 +32,70 @@ nav a:hover {
     background-color: #45a049;
 }
 
-h1 {
-    color: #4caf50;
-    text-align: center;
-}
-
-.conteudo {
+.container {
+    flex: 1;
     padding: 20px;
     text-align: center;
-    flex: 1; 
 }
 
-.noticias {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
+h1 {
+    color: #4caf50;
+    margin-bottom: 20px;
 }
 
-.noticia {
+.project {
     background-color: white;
-    width: 30%;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+    max-width: 800px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
-.noticia img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+footer {
+    text-align: center;
+    padding: 10px 0;
 }
 
-.noticia h3 {
-    color: #4caf50;
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr; /* Muda para layout em coluna */
+        text-align: center; /* Centraliza conteúdo */
+    }
+
+    nav a {
+        display: block; /* Links em coluna */
+        margin: 5px 0; /* Espaçamento vertical */
+    }
 }
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 10px; /* Reduz o padding em telas muito pequenas */
+    }
+
+    nav a {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    h1 {
+        font-size: 22px; /* Ajusta o título */
+    }
+
+    .container {
+        padding: 10px; /* Reduz a margem lateral */
+    }
+}
+
+
