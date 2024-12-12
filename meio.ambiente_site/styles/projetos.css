@@ -7,12 +7,14 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 header, footer {
     background-color: #2E7D32;
     color: white;
     text-align: center;
     padding: 15px;
 }
+
 nav {
     margin: 10px 0;
 }
@@ -25,18 +27,22 @@ nav a {
     border-radius: 5px;
     transition: background 0.3s;
 }
+
 nav a:hover {
     background-color: #45a049;
 }
+
 .container {
     flex: 1;
     padding: 20px;
     text-align: center;
 }
+
 h1 {
     color: #4caf50;
     margin-bottom: 20px;
 }
+
 .project {
     background-color: white;
     margin: 20px auto;
@@ -49,12 +55,46 @@ h1 {
     align-items: center;
     max-width: 800px;
 }
+
 .project img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
 footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr; /* Muda para layout em coluna */
+        text-align: center; /* Centraliza conteúdo */
+    }
+
+    nav a {
+        display: block; /* Links em coluna */
+        margin: 5px 0; /* Espaçamento vertical */
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 10px; /* Reduz o padding em telas muito pequenas */
+    }
+
+    nav a {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    h1 {
+        font-size: 22px; /* Ajusta o título */
+    }
+
+    .container {
+        padding: 10px; /* Reduz a margem lateral */
+    }
+}
+
